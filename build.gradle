@@ -1,0 +1,29 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'net.wequick.small'
+//集成Small插件
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        //集成Small，Small项目的编译流程
+        classpath 'net.wequick.tools.build:gradle-small:1.1.0-alpha2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+//定义small
+small {
+    aarVersion = '1.1.0-alpha2'
+}

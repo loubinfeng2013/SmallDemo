@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "bundles": [
+    {
+      "uri": "plugin1",
+      "pkg": "com.loubinfeng.www.appplugin"
+    }
+  ]
+}
